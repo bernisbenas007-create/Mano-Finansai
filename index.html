@@ -386,7 +386,20 @@ localStorage.setItem(
 JSON.stringify(allowance)
 );
 
-alert("Savaitpinigiai išsaugoti!");
+transactions.push({
+
+amount: allowance.amount,
+type: "income",
+category: "Savaitpinigiai",
+date: new Date().toISOString().split("T")[0]
+
+});
+
+saveData();
+
+render();
+
+alert("Savaitpinigiai pridėti!");
 
 }
 
